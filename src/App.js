@@ -63,12 +63,14 @@ function App() {
         <Grid item sm={12} md={6} padding={10}>
           <Box display="flex" flexDirection="column" textAlign="center" justifyContent="center" alignItems="center">
             <Typography variant="h3" marginBottom={5}>
-              Better data science, weeks before your data scientists
+              Better data science, weeks
+            </Typography>
+            <Typography variant="h3" marginBottom={5}>
+              before your data scientists.
             </Typography>
 
             <Typography variant="body2" marginBottom={5}>
-              Plug and play data science for businesses - just integrate once and configure any use case required
-            </Typography>
+              Plug and play data science for businesses.            </Typography>
 
             <Fade in={fadeTrigger.trigger1} timeout={500}>
               <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" width={300}>
@@ -77,7 +79,7 @@ function App() {
                   Plug & Play
                 </Typography>
                 <Typography variant="body2">
-                  Works with GCP, Azure, most ERP and CRMs
+                  Works with GCP, Azure, most ERP and CRMs.
                 </Typography>
               </Box>
             </Fade>
@@ -89,7 +91,7 @@ function App() {
                   Build for any Use Case
                 </Typography>
                 <Typography variant="body2">
-                  Build your own data science solution with a smaller team of engineers
+                  Build your own data science solution with a smaller team of engineers.
                 </Typography>
               </Box>
             </Fade>
@@ -101,7 +103,7 @@ function App() {
                   Real time Data Hypothesisation
                 </Typography>
                 <Typography variant="body2">
-                Monitor for data patterns without the HR or computing costs as before
+                Monitor for data patterns without the HR or computing costs as before.
                 </Typography>
               </Box>
             </Fade>
