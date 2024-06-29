@@ -60,17 +60,14 @@ function App() {
       </Box>
 
       <Grid container>
-        <Grid item sm={12} md={6} padding={5}>
+        <Grid item sm={12} md={6} padding={10}>
           <Box display="flex" flexDirection="column" textAlign="center" justifyContent="center" alignItems="center">
             <Typography variant="h3" marginBottom={0}>
-            Giving your data scientists that advantage
-            </Typography>
-            <Typography variant="h3" marginBottom={5}>
-            Better and quicker data science, without the heavy lifting.
+            Giving your data scientists that unfair advantage
             </Typography>
 
             <Typography variant="body2" marginBottom={5}>
-              Plug and play data science for businesses.            </Typography>
+            Better and quicker data science, without the heavy lifting.            </Typography>
 
             <Fade in={fadeTrigger.trigger1} timeout={500}>
               <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" width={300}>
