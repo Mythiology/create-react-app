@@ -63,10 +63,10 @@ function App() {
         <Grid item sm={12} md={6} padding={10}>
           <Box display="flex" flexDirection="column" textAlign="center" justifyContent="center" alignItems="center">
             <Typography variant="h3" marginBottom={0}>
-              Better data science, weeks
+            Giving your data scientists that advantage
             </Typography>
             <Typography variant="h3" marginBottom={5}>
-              before your data scientists.
+            Better and quicker data science, without the heavy lifting.
             </Typography>
 
             <Typography variant="body2" marginBottom={5}>
