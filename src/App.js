@@ -60,7 +60,7 @@ function App() {
       </Box>
 
       <Grid container>
-        <Grid item sm={12} md={6} padding={10}>
+        <Grid item sm={12} md={6} padding={5}>
           <Box display="flex" flexDirection="column" textAlign="center" justifyContent="center" alignItems="center">
             <Typography variant="h3" marginBottom={0}>
             Giving your data scientists that advantage
