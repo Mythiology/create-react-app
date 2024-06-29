@@ -10,12 +10,12 @@
     {
       "src": "odd_vector.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "438x458"
     },
     {
       "src": "odd_vector.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "438x458"
     }
   ],
   "start_url": ".",
