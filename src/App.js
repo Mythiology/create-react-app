@@ -12,35 +12,30 @@ import { useState, useEffect } from 'react';
 function App() {
   const [rotation, setRotation] = useState(0);
   const [fadeTrigger, setFadeTrigger] = useState({
-    trigger1: false,
+    trigger1: true,
     trigger2: false,
     trigger3: false,
-    trigger4: false
   });
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY + window.innerHeight;
 
-    const triggerHeight1 = 800; 
-    const triggerHeight2 = 900; 
-    const triggerHeight3 = 1000; 
-    const triggerHeight4 = 1100;
+    const triggerHeight1 = 900; 
+    const triggerHeight2 = 1250; 
+    const triggerHeight3 = 1600; 
 
-    if (scrollPosition >= triggerHeight4) {
-      setRotation(360); // Rotate to 270 degrees
-      setFadeTrigger({ trigger1: false, trigger2: false, trigger3: false, trigger4: true });
-    } else if (scrollPosition >= triggerHeight3) {
+    if (scrollPosition >= triggerHeight3) {
       setRotation(270); // Rotate to 270 degrees
-      setFadeTrigger({ trigger1: false, trigger2: false, trigger3: true, trigger4: false });
+      setFadeTrigger({ trigger1: false, trigger2: false, trigger3: false });
     } else if (scrollPosition >= triggerHeight2) {
       setRotation(180); // Rotate to 180 degrees
-      setFadeTrigger({ trigger1: false, trigger2: true, trigger3: false, trigger4: false });
+      setFadeTrigger({ trigger1: false, trigger2: false, trigger3: true });
     } else if (scrollPosition >= triggerHeight1) {
       setRotation(90); // Rotate to 90 degrees
-      setFadeTrigger({ trigger1: true, trigger2: false, trigger3: false, trigger4: false });
+      setFadeTrigger({ trigger1: false, trigger2: true, trigger3: false });
     } else {
       setRotation(0); // Default rotation
-      setFadeTrigger({ trigger1: false, trigger2: false, trigger3: false, trigger4: false });
+      setFadeTrigger({ trigger1: true, trigger2: false, trigger3: false });
     }
   };
 
@@ -71,7 +66,7 @@ function App() {
             </Typography>
 
             <Fade in={fadeTrigger.trigger1} timeout={500}>
-              <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" width={300}>
+              <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" width={300} marginTop={5}>
                 <SourceIcon color="primary" sx={{fontSize:60}}/>
                 <Typography variant="h6"> 
                   Plug & Play
@@ -83,7 +78,7 @@ function App() {
             </Fade>
 
             <Fade in={fadeTrigger.trigger2} timeout={500}>
-              <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" width={300}>
+              <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" width={300} marginTop={5}>
                 <AnalyticsIcon color="primary" sx={{fontSize:60}}/>
                 <Typography variant="h6"> 
                   Build for any Use Case
@@ -95,7 +90,7 @@ function App() {
             </Fade>
 
             <Fade in={fadeTrigger.trigger3} timeout={500}>
-              <Box display="flex" flexDirection="column" sx={{marginBottom:5}} alignItems="center" justifyContent="center" textAlign="center" width={300}>
+              <Box display="flex" flexDirection="column" sx={{marginBottom:5, marginTop: 5}} alignItems="center" justifyContent="center" textAlign="center" width={300}>
                 <UpdateIcon color="primary" sx={{fontSize:60}}/>
                 <Typography variant="h6"> 
                   Real time Data Hypothesisation
@@ -106,17 +101,15 @@ function App() {
               </Box>
             </Fade>
 
-            <Fade in={fadeTrigger.trigger4} timeout={500}>
-              <Box display="flex" flexDirection="column" sx={{gap:2}} alignItems="center" textAlign="center">
+              <Box display="flex" flexDirection="column" sx={{gap:2}} alignItems="center" textAlign="center" marginTop={10}>
                 <Typography variant="body2"> 
                   Speak with us to find out more!
                 </Typography>
 
-                <Button variant="contained" size="medium" sx={{width:200, marginBottom:25}} href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3veUkDqnSNlBlc6zM04NB0XiocmJh7bYi5LFSb8nD1_rOYdrYR6eQbEx8Q1pIjGFFeLnSdgNYy">
+                <Button variant="contained" size="medium" sx={{width:200, marginBottom:15}} href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3veUkDqnSNlBlc6zM04NB0XiocmJh7bYi5LFSb8nD1_rOYdrYR6eQbEx8Q1pIjGFFeLnSdgNYy">
                   Contact Us
                 </Button>
               </Box>
-            </Fade>
 
             <Typography variant="body2">
               OpenDeepData.ai 2024 | All rights reserved.
@@ -124,7 +117,7 @@ function App() {
           </Box>
         </Grid>
 
-        <Grid item sm={0} md={6} padding={15} sx={{display: {xs: 'none', md: 'flex'}, overflow: 'hidden'}}>
+        <Grid item sm={0} md={6} padding={15} marginTop={10} sx={{display: {xs: 'none', md: 'flex'}, overflow: 'hidden'}}>
           <img
             src={webpage_img}
             alt="Rotating"
