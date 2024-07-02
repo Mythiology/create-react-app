@@ -17,11 +17,16 @@ function App() {
     trigger3: false,
   });
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight;
+  const maxHeight = document.documentElement.scrollHeight;
+  const minHeight = window.innerHeight;
+  const maxScrollDistance = maxHeight - minHeight;
+  const scrollInterval = (maxScrollDistance - 100) / 2;
 
-    const triggerHeight1 = 900; 
-    const triggerHeight2 = 1300; 
+  const triggerHeight1 = minHeight + scrollInterval; 
+  const triggerHeight2 = minHeight + scrollInterval * 2; 
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + minHeight; //scrollY is original starting point, inner height is the height of viewport
 
     if (scrollPosition >= triggerHeight2) {
       setRotation(180); // Rotate to 180 degrees
