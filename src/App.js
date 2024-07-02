@@ -17,15 +17,14 @@ function App() {
     trigger3: false,
   });
 
-  const maxHeight = document.documentElement.scrollHeight;
-  const minHeight = window.innerHeight;
-  const maxScrollDistance = maxHeight - minHeight;
-  const scrollInterval = (maxScrollDistance - 100) / 2;
-
-  const triggerHeight1 = minHeight + scrollInterval; 
-  const triggerHeight2 = minHeight + scrollInterval * 2; 
-
   const handleScroll = () => {
+    const maxHeight = document.documentElement.scrollHeight;
+    const minHeight = window.innerHeight;
+    const maxScrollDistance = maxHeight - minHeight;
+    const scrollInterval = (maxScrollDistance - 100) / 2;
+  
+    const triggerHeight1 = minHeight + scrollInterval; 
+    const triggerHeight2 = minHeight + scrollInterval * 2; 
     const scrollPosition = window.scrollY + minHeight; //scrollY is original starting point, inner height is the height of viewport
 
     if (scrollPosition >= triggerHeight2) {
