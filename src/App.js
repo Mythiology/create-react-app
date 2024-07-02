@@ -69,7 +69,7 @@ function App() {
                     Plug & Play
                   </Typography>
                   <Typography variant="body2">
-                    Works with GCP, Azure, most ERP and CRMs.
+                    Works with GCP, Azure, AWS, most ERP and CRMs.
                   </Typography>
                 </Box>
               </Fade>
